@@ -105,8 +105,10 @@ export default {
 
   data() {
     return {
+      isLoading: false,
       asset: {},
       history: [],
+      markets: [],
     };
   },
 
