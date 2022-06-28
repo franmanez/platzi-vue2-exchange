@@ -99,7 +99,7 @@ export default {
             a.name.toLowerCase().includes(this.filter.toLowerCase())
         )
         .sort((a, b) => {
-          if (parseInt(a.rank > parseInt(b.rank))) {
+          if (parseInt(a.rank) > parseInt(b.rank)) {
             return this.sortOrder;
           }
           return altOrder;
@@ -113,8 +113,7 @@ export default {
     },
 
     changeSortOrder() {
-      alert(this.sortOrder);
-      this.sortOrder = this.sortOrder == 1 ? 1 : -1;
+      this.sortOrder = this.sortOrder == 1 ? -1 : 1;
     },
   },
 };
